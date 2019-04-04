@@ -15,6 +15,6 @@ public class OrcClanFactury implements AbstractFactury {
 
     @Override
     public Leader getLeader() {
-        return Warcief.getWarcief();
+        return Warchief.getWarchief();
     }
 }

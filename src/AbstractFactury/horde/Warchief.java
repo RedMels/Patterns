@@ -2,9 +2,9 @@ package AbstractFactury.horde;
 
 import AbstractFactury.Leader;
 
-public class Warcief implements Leader {
+public class Warchief implements Leader {
 
-    private static Warcief warcief;
+    private static Warchief warchief;
 
     @Override
     public void motivate(){
@@ -16,12 +16,12 @@ public class Warcief implements Leader {
         System.out.println("Get reinforced by the power of earth, water and fire");
     }
 
-    private Warcief(){}
+    private Warchief(){}
 
-    public static Warcief getWarcief(){
-        if (warcief == null){
-            warcief = new Warcief();
+    static synchronized Warchief getWarchief(){
+        if (warchief == null){
+            warchief = new Warchief();
         }
-        return warcief;
+        return warchief;
     }
 }
